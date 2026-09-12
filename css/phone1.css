@@ -4,12 +4,12 @@
 }
 
 .heading{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .gallery img{
-    width:270px;
-    height:360px;
+    width:220px;
+    height:300px;
 }
 
 .about{
@@ -21,9 +21,9 @@
 }
 
 .about img{
-    width: 200px;
-    height: 150px;
-    padding: 0px 15px;
+    width: 260px;
+    height: 190px;
+    padding: 0;
 }
 
 .message{
@@ -31,23 +31,31 @@
     height:200px;
 }
 
+.columns{
+    grid-template-columns: 1fr;
+    padding-left: 0;
+}
+
 .box{
-    height: 150px;
-    width:250px;
-    background-color: rgba(255, 255, 255, 0.1);
+    width: min(100%, 300px);
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.04);
     border-radius: 20px;
-    margin: 10px;
+    margin: 10px auto;
     padding: 10px;
 }
 
+.box-media img {
+    height: 130px;
+}
 
 .box h2{
-    color: rgb(59, 129, 62);
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    color: #ff6b6b;
+    font-size: 1.1rem;
+    margin-bottom: 0;
 }
 
 .box p{
-    color:rgb(13, 59, 59);
+    color:#dfe7f4;
     font-size: .8rem;
 }
