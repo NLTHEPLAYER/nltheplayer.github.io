@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
     let lastScrollY = window.scrollY;
 
+    if (!navbar) {
+        return;
+    }
+
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -45,12 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
+        const hideThreshold = window.innerWidth <= 900 ? 12 : 20;
 
-        if (currentScrollY <= 10) {
+        if (currentScrollY <= hideThreshold) {
             navbar.classList.remove('nav-hidden');
-        } else if (currentScrollY > lastScrollY) {
+        } else if (currentScrollY > lastScrollY + 3) {
             navbar.classList.add('nav-hidden');
-        } else {
+        } else if (currentScrollY < lastScrollY - 3) {
             navbar.classList.remove('nav-hidden');
         }
 

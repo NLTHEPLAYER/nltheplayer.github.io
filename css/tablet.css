@@ -4,6 +4,14 @@
     padding-left: 0;
 }
 
+#projects,
+#education,
+#about,
+#contact {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
 .box{
     width: min(100%, 500px);
     height: auto;
@@ -28,14 +36,21 @@
     font-size: 1rem;
 }
 
+.about {
+    width: min(100%, 900px);
+    margin: 0 auto 20px;
+    padding: 20px 18px;
+}
+
 .about img{
     padding: 0;
-    width:400px;
-    height:300px;
+    width: min(100%, 400px);
+    height: auto;
+    aspect-ratio: 4 / 3;
 }
 
 .name{
-    padding: 5px;
+    padding: 12px 10px;
 }
 
 .name h2{
@@ -44,4 +59,15 @@
 
 .name p{
     font-size: 1rem;
+}
+
+#contact h4 {
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.footer-content {
+    padding-left: 18px;
+    padding-right: 18px;
 }
